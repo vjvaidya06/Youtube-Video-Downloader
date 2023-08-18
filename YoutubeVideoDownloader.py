@@ -21,7 +21,7 @@ if link != "":
             linkbut = st.button(label="Open Downloadable Link", key=None, help=None, on_click=None, args=None, kwargs=None, type="primary", disabled=False)
             if linkbut:
                 js = f"window.open('{mp4_url}')"
-                js = f"window.location.href = '{mp4_url}'"
+                js = "window.location.href = 'https://youtubevideodownloader.streamlit.app'"
                 html = '<img src onerror="{}">'.format(js)
                 div = Div(text=html)
                 st.bokeh_chart(div)
