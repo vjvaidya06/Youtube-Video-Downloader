@@ -28,7 +28,5 @@ if link != "":
             player_response_dict = json.loads(player_response_json)
             mp4_url = player_response_dict["streamingData"]["formats"][0]["url"]
             linkbut = st.button(label="Open Downloadable Link", key=None, help=None, on_click=open_page(mp4_url), args=None, kwargs=None, type="primary", disabled=False)
-        else:
-            st.text("Failed to locate player")
     except:
         st.text("Invalid Link")
